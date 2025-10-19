@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	q "github.com/aplication/db/querys"
+	q "github.com/JoaooffZz/fire-simple/app/db/querys"
 	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
