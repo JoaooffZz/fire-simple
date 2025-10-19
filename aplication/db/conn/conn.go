@@ -4,10 +4,11 @@ import (
 	"database/sql"
 	"fmt"
 
+	q "github.com/aplication/db/querys"
 	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
-func Connect(config SocketConfigDB) (*sql.DB, error) {
+func Connect(config SocketConfigDB) (*q.QuerysDB, error) {
 	connStr := fmt.Sprintf(
 		"user=%s password=%s host=%s dbname=%s sslmode=disable",
 		config.USER,
