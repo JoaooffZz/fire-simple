@@ -1,4 +1,4 @@
-module github.com/aplication/db/conn
+module github.com/JoaooffZz/fire-simple/db/conn
 
 go 1.24.7
 

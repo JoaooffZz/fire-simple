@@ -1,3 +1,3 @@
-module github.com/aplication/db/querys
+module github.com/JoaooffZz/fire-simple/db/querys
 
 go 1.24.7
