@@ -5,11 +5,13 @@ import (
 )
 
 type QuerysDB struct {
-	conn *sql.DB
+	conn           *sql.DB
+	tabelClientsIP string
 }
 
 func New(conn *sql.DB) *QuerysDB {
 	return &QuerysDB{
-		conn: conn,
+		conn:           conn,
+		tabelClientsIP: "clients_ip",
 	}
 }

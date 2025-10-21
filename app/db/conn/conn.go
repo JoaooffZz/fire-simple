@@ -2,13 +2,13 @@ package conn
 
 import (
 	"database/sql"
+	qrs "db/querys"
 	"fmt"
 
-	q "github.com/JoaooffZz/fire-simple/app/db/querys"
 	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
-func Connect(config SocketConfigDB) (*q.QuerysDB, error) {
+func Connect(config SocketConfigDB) (*qrs.QuerysDB, error) {
 	connStr := fmt.Sprintf(
 		"user=%s password=%s host=%s dbname=%s sslmode=disable",
 		config.USER,
@@ -27,5 +27,6 @@ func Connect(config SocketConfigDB) (*q.QuerysDB, error) {
 		defer db.Close()
 		return nil, err
 	}
-	return db, nil
+
+	return qrs.New(db), nil
 }

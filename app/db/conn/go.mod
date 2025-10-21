@@ -1,8 +1,13 @@
-module github.com/JoaooffZz/fire-simple/app/db/conn
+module db/conn
 
 go 1.24.7
 
-require github.com/jackc/pgx/v4 v4.18.3
+replace db/querys => ../querys
+
+require (
+	db/querys v0.0.0-00010101000000-000000000000
+	github.com/jackc/pgx/v4 v4.18.3
+)
 
 require (
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
